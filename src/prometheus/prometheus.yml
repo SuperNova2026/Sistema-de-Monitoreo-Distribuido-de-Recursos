@@ -1,0 +1,8 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'monitoring_nodes'
+    static_configs:
+      - targets: ['node1:9100', 'node2:9100', 'node3:9100']  # Reemplaza con las direcciones IP o nombres de host de los nodos monitoreados
+    metrics_path: '/metrics'
